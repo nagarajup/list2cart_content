@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aniapps.grocerychecklist",
+      "sha256_cert_fingerprints": [
+        "5C:01:DC:6A:25:1A:BF:75:55:91:1B:5B:CC:DD:18:92:3D:2A:32:AB:0A:09:A3:D5:78:7A:08:EA:5A:6D:0C:DC"
+      ]
+    }
+  }
+]
