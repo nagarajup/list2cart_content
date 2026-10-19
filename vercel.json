@@ -14,7 +14,7 @@
     }
   ],
   "rewrites": [
-    { "source": "/l/:code", "destination": "/l/index.html" }
+    { "source": "/l/:code", "destination": "/l" }
   ],
   "headers": [
     {
