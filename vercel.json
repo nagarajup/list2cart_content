@@ -11,7 +11,8 @@
       "source": "/app/",
       "destination": "https://play.google.com/store/apps/details?id=com.aniapps.grocerychecklist",
       "permanent": false
-    }
+    },
+    { "source": "/l/:code", "destination": "/l/index.html" }
   ],
   "headers": [
     {
