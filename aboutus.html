@@ -1,68 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About List2Cart</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            color: #2a9d8f;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .section-title {
-            margin-top: 20px;
-            color: #264653;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>About List2Cart</title>
+<meta name="description" content="List2Cart by AniApps – a simple grocery list app for Indian homes. Make your list in seconds and share it live with family.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --green:#01AA4F; --green-dark:#018a40; --soft:#E9F9F2; --ink:#17231d; --muted:#4f5d56; --line:#e3ebe6; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Poppins",system-ui,sans-serif; color:var(--ink); background:#f4f7f6; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  main { max-width:720px; margin:0 auto; padding:20px 16px 32px; }
+  .hero { background:var(--green); color:#fff; border-radius:20px; padding:28px 24px; text-align:center; }
+  .logo { width:56px; height:56px; border-radius:16px; background:#fff; display:inline-grid; place-items:center; margin-bottom:10px; }
+  .hero h1 { font-size:28px; line-height:1.2; }
+  .hero h1 span { color:#FFD23F; }
+  .hero p { color:#fff; opacity:.92; margin-top:6px; font-size:16px; font-weight:500; }
+  .card { background:#fff; border-radius:16px; padding:22px 20px; margin-top:14px; box-shadow:0 2px 10px rgba(25,55,48,.05); }
+  h2 { font-size:18px; margin-bottom:8px; color:var(--green-dark); }
+  p { color:var(--muted); font-size:15px; }
+  p + p { margin-top:10px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px; }
+  .feat { background:var(--soft); border-radius:12px; padding:12px 14px; }
+  .feat b { display:block; font-size:14px; color:var(--ink); }
+  .feat span { font-size:13px; color:var(--muted); }
+  ul { list-style:none; margin-top:4px; }
+  li { padding:8px 0; border-bottom:1px solid var(--line); font-size:15px; color:var(--muted); display:flex; gap:10px; }
+  li:last-child { border-bottom:0; }
+  a { color:var(--green-dark); }
+  .links { display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:6px; font-size:14px; }
+  .play { display:inline-block; margin-top:14px; background:#111; color:#fff; text-decoration:none; padding:10px 18px; border-radius:10px; font-weight:600; font-size:15px; }
+  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:18px; }
+  @media (max-width:420px){ .grid { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>About List2Cart</h1>
-        <p><strong>List2Cart</strong> is your ultimate shopping companion, designed to simplify your shopping experience and make it more efficient. Whether you're shopping for groceries, furniture, beauty products, or anything else, List2Cart helps you stay organized and stress-free.</p>
-
-        <h2 class="section-title">Key Features:</h2>
-        <ul>
-            <li><strong>Create & Customize Lists:</strong> Add items, specify quantities, and include custom notes effortlessly.</li>
-            <li><strong>Share Your Lists:</strong> Seamlessly share your shopping lists with nearby shops or individuals for quick processing.</li>
-            <li><strong>Explore Multiple Categories:</strong> From groceries to beauty products, manage all your shopping needs in one place.</li>
-            <li><strong>Track Your History:</strong> Access your previous lists and maintain a record of your purchases.</li>
-            <li><strong>Shop Owner Support:</strong> Allow shop owners to receive lists, pack items, and deliver them directly to customers.</li>
-        </ul>
-
-        <h2 class="section-title">App Details:</h2>
-        <p><strong>Version:</strong>5.0.27</p>
-        <p><strong>Contact:</strong> <a href="mailto:nagarajup.andap@gmail.com">nagarajup.andap@gmail.com</a></p>
-
-        <footer>
-            <p>Simplify your shopping journey today with <strong>List2Cart</strong>!</p>
-        </footer>
+<main>
+  <section class="hero">
+    <div class="logo" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#01AA4F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L22 7H6"/></svg>
     </div>
+    <h1>List<span>2</span>Cart</h1>
+    <p>List it. Never miss it.</p>
+  </section>
+
+  <section class="card">
+    <h2>Why we made List2Cart</h2>
+    <p>Every family knows the moment: the bags are home, the paper list is crumpled, and one thing is missing. "Where is the jeera?"</p>
+    <p>List2Cart makes the grocery list simple. Pick items with pictures in a few taps, share the list with your family, and tick items off together at the shop, so nothing is forgotten and nothing is bought twice.</p>
+  </section>
+
+  <section class="card">
+    <h2>What you can do</h2>
+    <div class="grid">
+      <div class="feat"><b>🛒 1000+ items</b><span>With photos and usual quantities</span></div>
+      <div class="feat"><b>👨‍👩‍👧 Share live</b><span>Family ticks items as they buy</span></div>
+      <div class="feat"><b>💬 WhatsApp ready</b><span>Share as text or a neat list card</span></div>
+      <div class="feat"><b>🗣️ Your language</b><span>Local names shown with English</span></div>
+      <div class="feat"><b>📝 Notes & photos</b><span>Brand, size, or your own items</span></div>
+      <div class="feat"><b>🏪 For shops too</b><span>Receive lists and tick as you pack</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Our promise</h2>
+    <ul>
+      <li>💚 <span>Free to use, with no ads.</span></li>
+      <li>🔒 <span>Your lists stay on your phone. Sign in only if you want to share a list live.</span></li>
+      <li>🧹 <span>Shared lists are deleted automatically 10 days after their last update.</span></li>
+      <li>🇮🇳 <span>Made in India, for Indian homes and kirana shopping.</span></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Contact us</h2>
+    <p>List2Cart is made by <b>AniApps</b>. Ideas, missing items or problems? We read every message.</p>
+    <p>📧 <a href="mailto:nagarajup.andap@gmail.com">nagarajup.andap@gmail.com</a></p>
+    <div class="links">
+      <a href="https://www.list2cart.in/">Website</a>
+      <a href="https://www.list2cart.in/privacypolicy.html">Privacy policy</a>
+      <a href="https://www.list2cart.in/terms.html">Terms of Service</a>
+      <a href="https://www.list2cart.in/delete-account.html">Delete account</a>
+    </div>
+    <a class="play" href="https://play.google.com/store/apps/details?id=com.aniapps.grocerychecklist">⭐ Rate us on Google Play</a>
+  </section>
+
+  <footer>© 2026 List2Cart by AniApps</footer>
+</main>
 </body>
 </html>
