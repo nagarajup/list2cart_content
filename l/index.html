@@ -33,7 +33,16 @@ li:last-child{border-bottom:0}.box{flex:none;width:20px;height:20px;border:2px s
   if(!m){fail("This link is not valid.");return}
   // Android: try the app first via intent:// (falls back to Play if not installed).
   if(/Android/i.test(navigator.userAgent)){
-    document.getElementById("open").href="intent://www.list2cart.in/l/"+m[1]+"#Intent;scheme=https;package=com.aniapps.grocerychecklist;S.browser_fallback_url="+encodeURIComponent("https://play.google.com/store/apps/details?id=com.aniapps.grocerychecklist")+";end";
+    // Opens the app if installed; otherwise Google Play (referrer carries the list code).
+    var play="https://play.google.com/store/apps/details?id=com.aniapps.grocerychecklist&referrer="+encodeURIComponent("utm_source=shared_list&list="+m[1]);
+    var intentUrl="intent://www.list2cart.in/l/"+m[1]+"#Intent;scheme=https;package=com.aniapps.grocerychecklist;S.browser_fallback_url="+encodeURIComponent(play)+";end";
+    document.getElementById("open").href=intentUrl;
+    // Try once automatically (not again when the user comes back with Back).
+    var tried=false; try{tried=sessionStorage.getItem("l2c_"+m[1])==="1";sessionStorage.setItem("l2c_"+m[1],"1");}catch(e){}
+    if(!tried){ setTimeout(function(){ location.href=intentUrl; }, 1200); }
+  } else {
+    document.getElementById("open").href="https://play.google.com/store/apps/details?id=com.aniapps.grocerychecklist";
+    document.getElementById("open").textContent="Get List2Cart on Google Play";
   }
   fetch(SUPABASE_URL+"/rest/v1/rpc/shared_list_preview",{method:"POST",headers:{"apikey":KEY,"Content-Type":"application/json"},body:JSON.stringify({p_share_code:m[1]})})
    .then(function(r){if(!r.ok)throw 0;return r.json()})
