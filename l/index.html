@@ -12,7 +12,7 @@ main{max-width:520px;margin:0 auto;padding:20px 16px 40px}
 .head{background:#01AA4F;color:#fff;padding:18px 20px}.head h1{margin:0;font-size:1.35rem}.head p{margin:4px 0 0;opacity:.9;font-size:.92rem}
 ul{list-style:none;margin:0;padding:6px 0}li{display:flex;gap:12px;align-items:flex-start;padding:10px 20px;border-bottom:1px solid #eef2f0}
 li:last-child{border-bottom:0}.box{flex:none;width:20px;height:20px;border:2px solid #b0b8b4;border-radius:50%;margin-top:2px}
-.done .box{background:#01AA4F;border-color:#01AA4F}.done .name{color:#8a9490;text-decoration:line-through}
+.done .box{background:#01AA4F;border-color:#01AA4F}.done .name{color:#8a9490;text-decoration:line-through}.na .box{border-color:#E65100}.na .name{color:#8a9490}.na .tag{color:#E65100;font-size:.8rem;font-weight:bold}
 .meta{display:block;color:#7a8682;font-size:.85rem}
 .cta{display:block;margin:20px 0 8px;padding:14px;text-align:center;background:#01AA4F;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold}
 .note{text-align:center;color:#687572;font-size:.88rem}.msg{padding:28px 20px;text-align:center;color:#687572}
@@ -53,7 +53,7 @@ li:last-child{border-bottom:0}.box{flex:none;width:20px;height:20px;border:2px s
      sub.textContent=(d.owner_name||"Someone")+" shared this list · "+done+"/"+items.length+" in cart";
      list.innerHTML=items.map(function(i){
        var meta=[i.quantity,i.note].filter(function(x){return x}).join(" · ");
-       return '<li class="'+(i.is_checked?"done":"")+'"><span class="box"></span><span><span class="name">'+esc(i.name)+'</span>'+(meta?'<span class="meta">'+esc(meta)+'</span>':'')+'</span></li>';
+       return '<li class="'+(i.is_na?"na":(i.is_checked?"done":""))+'"><span class="box"></span><span><span class="name">'+esc(i.name)+'</span>'+(meta?'<span class="meta">'+esc(meta)+'</span>':'')+(i.is_na?'<span class="meta tag">Not available</span>':'')+'</span></li>';
      }).join("")||'<li class="msg">This list is empty.</li>';
    })
    .catch(function(){fail("Couldn't load the list. Please try again.")});
